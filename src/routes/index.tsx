@@ -162,7 +162,7 @@ function Index() {
         <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             <ShieldCheck className="h-4 w-4 text-[oklch(0.72_0.14_180)]" />
-            Files are processed locally in your browser. Nothing is uploaded.
+            Files are processed locally in your browser. Nothing is uploaded online.
           </div>
           <button
             type="button"
