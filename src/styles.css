@@ -152,8 +152,40 @@
     border-color: var(--color-border);
   }
 
+  html, body {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Inter", "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    background-image: var(--gradient-bg);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 6px;
   }
 }
+
+@layer utilities {
+  .glass {
+    background-color: rgba(255,255,255,0.78);
+    backdrop-filter: saturate(140%) blur(14px);
+    -webkit-backdrop-filter: saturate(140%) blur(14px);
+    box-shadow: var(--shadow-soft);
+  }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-lift { box-shadow: var(--shadow-lift); }
+}
+
+@keyframes drive-loop {
+  0%   { transform: rotate(0deg) translateX(34px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(34px) rotate(-360deg); }
+}
+.car-loop { animation: drive-loop 2.2s linear infinite; transform-origin: center; }
+
