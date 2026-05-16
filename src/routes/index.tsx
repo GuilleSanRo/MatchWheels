@@ -141,7 +141,7 @@ function Index() {
           <UploadCard
             step={1}
             label="Upload PRICER file"
-            helper="Full catalogue with all versions and List_Price in column AF. Usually named Fichero_PRICER_en_formato_MATRIZ…"
+            helper={"Named 'Fichero_PRICER_en_formato_MATRIZ…'\nUpload with all countries, columns and untouched just in case :)"}
             file={pricerFile}
             onFile={setPricerFile}
             disabled={processing}
