@@ -505,7 +505,7 @@ export function downloadEnriched(matrix: ParsedWorkbook, summary: MatchSummary) 
   const bytes = buildEnrichedWorkbook(matrix, summary);
   const baseName = matrix.fileName.replace(/\.(xlsx|xls)$/i, "");
   const fileName = `enriched_${baseName}.xlsx`;
-  const blob = new Blob([bytes], {
+  const blob = new Blob([bytes.buffer as ArrayBuffer], {
     type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
   });
   const url = URL.createObjectURL(blob);
