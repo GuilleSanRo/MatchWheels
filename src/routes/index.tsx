@@ -128,12 +128,11 @@ function Index() {
             confidence, and fills the matched List Price automatically.
           </p>
           <p className="mt-3 text-sm text-muted-foreground/90 max-w-2xl">
-            Output: confidence in column{" "}
+            Output: confidence in Col.{" "}
             <code className="rounded bg-accent px-1.5 py-0.5 text-foreground">DF</code>
-            , matched List_Price in column{" "}
+            {" "}and matched List_Price in Col.{" "}
             <code className="rounded bg-accent px-1.5 py-0.5 text-foreground">DG</code>
-            . Make sure they are empty in your Matrix before uploading — and that
-            nothing was touched in the original PRICER file.
+            . Make sure they are empty in your Matrix!
           </p>
         </header>
 
