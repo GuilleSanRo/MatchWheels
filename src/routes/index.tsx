@@ -253,10 +253,8 @@ function Index() {
           )}
         </section>
 
-        <footer className="mt-16 text-center text-xs text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          Upload a PRICER ("Pricer in matrix format") and a Matrix file. The app
-          matches each Matrix car version against the PRICER, scores confidence,
-          and fills the matched MSRP automatically.
+        <footer className="mt-16 text-center text-xs text-muted-foreground">
+          © 2026 MatchWheels - Guillermo Santiago
         </footer>
       </div>
     </main>
