@@ -119,9 +119,6 @@ function Index() {
       <div className="mx-auto w-full max-w-[1040px]">
         {/* Header */}
         <header className="mb-10 sm:mb-12">
-          <div className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-white/70 backdrop-blur px-3 py-1 text-xs text-muted-foreground mb-5 shadow-soft">
-            <Sparkles className="h-3.5 w-3.5 text-[oklch(0.59_0.22_280)]" />
-          </div>
           <MatchWheelsTitle />
           <p className="mt-5 text-base text-muted-foreground max-w-2xl leading-relaxed">
             Upload a full <span className="text-foreground font-medium">PRICER</span>{" "}
