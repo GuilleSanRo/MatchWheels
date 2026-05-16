@@ -121,9 +121,9 @@ function Index() {
         <header className="mb-10 sm:mb-12">
           <MatchWheelsTitle />
           <p className="mt-5 text-base text-muted-foreground max-w-2xl leading-relaxed">
-            Upload a full <span className="text-foreground font-medium">PRICER</span>{" "}
+            Upload a <span className="text-foreground font-medium">PRICER</span>{" "}
             (“Pricer en formato matriz”) and a{" "}
-            <span className="text-foreground font-medium">Matrix</span> sample file.
+            <span className="text-foreground font-medium">Matrix</span> file.
             The app matches each Matrix car version against the PRICER, scores
             confidence, and fills the matched List Price automatically.
           </p>
