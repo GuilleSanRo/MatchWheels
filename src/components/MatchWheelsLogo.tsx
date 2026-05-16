@@ -48,21 +48,16 @@ export function MatchWheelsLogo({ size = 44, className }: Props) {
 
 export function MatchWheelsTitle() {
   return (
-    <div className="flex items-center gap-3 sm:gap-4">
-      <span className="relative inline-flex items-center justify-center rounded-2xl bg-white/70 backdrop-blur shadow-soft border border-border p-1.5">
-        <MatchWheelsLogo size={42} />
+    <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
+      <span className="bg-gradient-to-r from-[oklch(0.59_0.22_280)] to-[oklch(0.55_0.2_310)] bg-clip-text text-transparent">
+        MatchWheels
       </span>
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
-        <span className="bg-gradient-to-r from-[oklch(0.59_0.22_280)] to-[oklch(0.55_0.2_310)] bg-clip-text text-transparent">
-          MatchWheels
-        </span>
-        <span className="text-foreground/80 font-medium">
-          : From Pricer to Shopper
-        </span>
-        <span className="block text-sm sm:text-base text-muted-foreground font-normal mt-1">
-          Matrix MSRP Updater
-        </span>
-      </h1>
-    </div>
+      <span className="text-foreground/80 font-medium">
+        : From Pricer to Shopper
+      </span>
+      <span className="block text-sm sm:text-base text-muted-foreground font-normal mt-1">
+        Matrix MSRP Updater
+      </span>
+    </h1>
   );
 }
