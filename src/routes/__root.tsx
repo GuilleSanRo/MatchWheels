@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "MatchWheels: From Pricer to Shopper" },
+      { name: "description", content: "Automate car price matching by uploading two Excel files to enrich a Matrix file with matched prices and confidence scores." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "MatchWheels: From Pricer to Shopper" },
+      { property: "og:description", content: "Automate car price matching by uploading two Excel files to enrich a Matrix file with matched prices and confidence scores." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "MatchWheels: From Pricer to Shopper" },
+      { name: "twitter:description", content: "Automate car price matching by uploading two Excel files to enrich a Matrix file with matched prices and confidence scores." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9b039b34-165a-4381-8f19-eb610849f0ea/id-preview-5fe0bc8b--2c4806f7-bfae-4aa0-a97f-12218b5c1086.lovable.app-1778934556230.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9b039b34-165a-4381-8f19-eb610849f0ea/id-preview-5fe0bc8b--2c4806f7-bfae-4aa0-a97f-12218b5c1086.lovable.app-1778934556230.png" },
     ],
     links: [
       {
