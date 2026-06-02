@@ -193,6 +193,7 @@ export interface MatchResult {
   matchedPricerRowNumber: number | null;
   confidence: number;
   matchedListPrice: number | string | null;
+  matchedUID: number | string | null;
   matchTier: "high" | "medium" | "low" | "none";
   reason: string;
 }
