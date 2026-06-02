@@ -53,8 +53,10 @@ export const PRICER_PRICE_HEADER = "List_Price";
 
 export const OUTPUT_CONFIDENCE_COL = "DF";
 export const OUTPUT_PRICE_COL = "DG";
+export const OUTPUT_UID_COL = "DH";
 export const OUTPUT_CONFIDENCE_HEADER = "MATCH_CONFIDENCE";
 export const OUTPUT_PRICE_HEADER = "MATCHED_UPDATED_LIST_PRICE";
+export const OUTPUT_UID_HEADER = "MATCHED_UID";
 
 export const FIELD_WEIGHTS: Record<FieldKey, number> = {
   COUNTRY: 0, // gate
