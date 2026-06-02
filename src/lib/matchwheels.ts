@@ -483,6 +483,7 @@ export function buildEnrichedWorkbook(
 
   const dfCol = colLetterToIndex(OUTPUT_CONFIDENCE_COL);
   const dgCol = colLetterToIndex(OUTPUT_PRICE_COL);
+  const dhCol = colLetterToIndex(OUTPUT_UID_COL);
 
   // Headers in row 1
   XLSX.utils.sheet_add_aoa(sheet, [[OUTPUT_CONFIDENCE_HEADER]], {
@@ -490,6 +491,9 @@ export function buildEnrichedWorkbook(
   });
   XLSX.utils.sheet_add_aoa(sheet, [[OUTPUT_PRICE_HEADER]], {
     origin: { r: 0, c: dgCol },
+  });
+  XLSX.utils.sheet_add_aoa(sheet, [[OUTPUT_UID_HEADER]], {
+    origin: { r: 0, c: dhCol },
   });
 
   for (const res of summary.results) {
@@ -501,11 +505,17 @@ export function buildEnrichedWorkbook(
       [[priceVal === null || priceVal === undefined ? "" : priceVal]],
       { origin: { r, c: dgCol } }
     );
+    const uidVal = res.matchedUID;
+    XLSX.utils.sheet_add_aoa(
+      sheet,
+      [[uidVal === null || uidVal === undefined ? "" : uidVal]],
+      { origin: { r, c: dhCol } }
+    );
   }
 
   // expand !ref
   const range = XLSX.utils.decode_range(sheet["!ref"] || "A1");
-  if (dgCol > range.e.c) range.e.c = dgCol;
+  if (dhCol > range.e.c) range.e.c = dhCol;
   if (matrix.rows.length - 1 > range.e.r) range.e.r = matrix.rows.length - 1;
   sheet["!ref"] = XLSX.utils.encode_range(range);
 
