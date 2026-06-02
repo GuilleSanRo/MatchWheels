@@ -428,10 +428,18 @@ export function runMatching(pricer: ParsedWorkbook, matrix: ParsedWorkbook): Mat
     else { tier = "none"; none++; }
 
     let matchedPrice: number | string | null = null;
+    let matchedUID: number | string | null = null;
     if (confidence >= 50 && bestRow !== null) {
       const raw = pricerRows[bestRow]?.[priceCol];
       if (raw !== null && raw !== undefined && raw !== "") {
         matchedPrice = raw as number | string;
+      }
+      const uidCol = pf.UID;
+      if (uidCol !== undefined) {
+        const uidRaw = pricerRows[bestRow]?.[uidCol];
+        if (uidRaw !== null && uidRaw !== undefined && uidRaw !== "") {
+          matchedUID = uidRaw as number | string;
+        }
       }
     }
 
@@ -440,6 +448,7 @@ export function runMatching(pricer: ParsedWorkbook, matrix: ParsedWorkbook): Mat
       matchedPricerRowNumber: bestRow !== null ? bestRow + 1 : null,
       confidence,
       matchedListPrice: matchedPrice,
+      matchedUID,
       matchTier: tier,
       reason: !mCountry
         ? "Matrix row missing COUNTRY"
