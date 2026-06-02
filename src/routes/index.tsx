@@ -150,7 +150,7 @@ function Index() {
           <UploadCard
             step={2}
             label="Upload MATRIX file"
-            helper={"Named 'MATRIZ_...'\nMake sure headers are worded like in Pricer and that DF/DG columns are empty"}
+            helper={"Named 'MATRIZ_...'\nMake sure headers are worded like in Pricer and that DF/DG/DH columns are empty"}
             file={matrixFile}
             onFile={setMatrixFile}
             disabled={processing}
